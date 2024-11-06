@@ -8,10 +8,21 @@ namespace SaToNiRo
 {
     public abstract class Vehicle
     {
-        public string RegisteringNumber { get; set; }
+        public string RegNumber { get; set; }
         public string Color { get; set; }
         public int Wheels { get; set; }
-
         
+        public Vehicle(string color, int wheels)
+        {
+           RegNumber = GenerateRandomRegNumber();
+           Color = color;
+           Wheels = wheels;
+        }
+
+        private string GenerateRandomRegNumber()
+        {
+            Random rnd = new Random();
+            return $"{(char)rnd.Next('A', 'Z')}{(char)rnd.Next('A', 'Z')}{(char)rnd.Next('A', 'Z')}{rnd.Next(100, 999)}";
+        }
     }
 }
