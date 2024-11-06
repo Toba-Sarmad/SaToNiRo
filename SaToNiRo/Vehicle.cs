@@ -12,14 +12,14 @@ namespace SaToNiRo
         public string Color { get; set; }
         public int Wheels { get; set; }
         
-        public Vehicle(string color, int wheels)
+        public Vehicle()
         {
            RegNumber = GenerateRandomRegNumber();
-           Color = color;
-           Wheels = wheels;
+         //  Color = color;
+          // Wheels = wheels;
         }
 
-        private string GenerateRandomRegNumber()
+        public static string GenerateRandomRegNumber()
         {
             Random rnd = new Random();
             return $"{(char)rnd.Next('A', 'Z')}{(char)rnd.Next('A', 'Z')}{(char)rnd.Next('A', 'Z')}{rnd.Next(100, 999)}";

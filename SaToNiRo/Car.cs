@@ -8,7 +8,16 @@ namespace SaToNiRo
 {
     public class Car : Vehicle
     {
-        private bool electricCar;
 
+        bool ElectricCar {  get; set; }
+
+        Random rnd = new Random();
+        
+
+        public Car()
+        {
+            RegNumber = Vehicle.GenerateRandomRegNumber();
+            ElectricCar = rnd.Next(0, 2) == 1;
+        }
     }
 }
