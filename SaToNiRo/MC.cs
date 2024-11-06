@@ -9,5 +9,14 @@ namespace SaToNiRo
     public class MC : Vehicle
     {
         public string Brand;
+
+        Random rnd = new Random();
+
+
+        public MC()
+        {
+            RegNumber = Vehicle.GenerateRandomRegNumber();
+            Brand = "Yamaha ";
+        }
     }
 }
