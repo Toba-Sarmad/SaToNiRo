@@ -60,15 +60,17 @@ namespace SaToNiRo
 
                     // Case 2 kommer bli elbil
 
-                case 3: // Här skapar vi Bussar
-                    vehicle = new Bus();
-                    wheels = 6;
+
+                case 3: // Här skapar vi MC
+                    vehicle = new MC();
+                    wheels = 2;
                     parkedVehicles.Add(vehicle);
                     break;
 
-                case 4: // Här skapar vi MC
-                    vehicle = new MC();
-                    wheels = 2;
+
+                case 4: // Här skapar vi Bussar
+                    vehicle = new Bus();
+                    wheels = 6;
                     parkedVehicles.Add(vehicle);
                     break;
 
