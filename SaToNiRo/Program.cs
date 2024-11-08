@@ -31,7 +31,7 @@
             switch (userInput)
             {
                 case 1:
-                    ChooseVehicle(parkinglot);
+                CustomerView.ChooseVehicle(parkinglot);
                     break;
 
                 case 2:
@@ -50,50 +50,6 @@
             }
         }
 
-        public static void ChooseVehicle(Parkinglot parkinglot)
-        {
-            Console.WriteLine("Välj fordon \n");
-            Console.WriteLine("1: Bil ");
-            Console.WriteLine("2: Elbil ");
-            Console.WriteLine("3: Mc ");
-            Console.WriteLine("4: Buss ");
-            Console.WriteLine("5: Tillbaka till menyn ");
-
-            int userInput = int.Parse(Console.ReadLine());
-            Console.Clear();
-
-
-            switch (userInput)
-            {
-                
-                case 1: // Bil
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
-                    break;
-
-                case 2: // ElBil
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
-                    break;
-
-                case 3: // MC
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
-                    break;
-
-                case 4: // Buss
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
-                    break;
-
-                case 5:
-                    Meny(parkinglot);
-                    break;
-
-                default:
-                    Console.WriteLine("Ogiltigt val, försök igen");
-                    break;
-            }
-        }
+        
     }
 }
