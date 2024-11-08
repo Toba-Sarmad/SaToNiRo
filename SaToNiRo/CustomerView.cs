@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,7 +39,7 @@ namespace SaToNiRo
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     isElectric = false;
-                    Console.WriteLine("Tack så mycket! Du får att parkera din BIL för 10 minuter.");
+                    Console.WriteLine("Tack så mycket! Parkerings tid" + duration);
                     break;
 
                 case 2: // ElBil
@@ -50,7 +51,7 @@ namespace SaToNiRo
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     isElectric = true;
-                    Console.WriteLine("Tack så mycket! Du får att parkera din EL-BIL för 10 minuter.");
+                    Console.WriteLine("Tack så mycket! Parkerings tid" + duration);
                     break;
 
                 case 3: // MC
@@ -61,7 +62,7 @@ namespace SaToNiRo
                     vehicle.Color = color;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
-                    Console.WriteLine("Tack så mycket! Du får att parkera din MC för 20 minuter.");
+                    Console.WriteLine("Tack så mycket! Parkerings tid" + duration);
                     break;
 
                 case 4: // Buss
@@ -72,7 +73,7 @@ namespace SaToNiRo
                     vehicle.Color = color;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
-                    Console.WriteLine("Tack så mycket! Du får att parkera  din Buss för 15 minuter.");
+                    Console.WriteLine("Tack så mycket! Parkerings tid" + duration);
                     break;
 
                 case 5:
