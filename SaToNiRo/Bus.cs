@@ -8,7 +8,7 @@ namespace SaToNiRo
 {
     public class Bus : Vehicle
     {
-        private int numOfPassangers;
+        public int numOfPassangers;
 
         Random rnd = new Random();
 
@@ -19,11 +19,11 @@ namespace SaToNiRo
             numOfPassangers = rnd.Next(1, 36);
         }
 
-        public void BusInfo()
+       /* public void BusInfo()
         {
           
             Console.WriteLine("Hur länge vill du parkera? ");
             int parkeringTime = int.Parse(Console.ReadLine());
-        }
+        }*/
     }
 }

@@ -18,15 +18,14 @@ namespace SaToNiRo
         {
             RegNumber = Vehicle.GenerateRandomRegNumber();
             ElectricCar = rnd.Next(0, 2) == 1;
+            
         }
 
-        public void CarInfo()
+       /* public void CarInfo()
         {
-            Console.WriteLine("Färg på fordon: ");
-            string carColor = Console.ReadLine();
-
+           
             Console.WriteLine("Hur länge vill du parkera? ");
             int parkeringTime = int.Parse(Console.ReadLine());
-        }
+        }*/
     }
 }

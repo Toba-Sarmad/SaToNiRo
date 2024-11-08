@@ -42,8 +42,8 @@ namespace SaToNiRo
 
         public void CreateRandomVehicles(int userInput)
         {
-            string color = "Röd ";
-            int duration = 10;
+            string color;
+            int duration;
             int wheels;
             Vehicle vehicle;
 
@@ -54,7 +54,9 @@ namespace SaToNiRo
             {
                 case 1: // Här skapar vi bilar
                     vehicle = new Car();
+                    color = "Röd";
                     wheels = 4;
+                    duration = 10;
                     parkedVehicles.Add(vehicle);
                     break;
 
@@ -62,13 +64,17 @@ namespace SaToNiRo
 
                 case 3: // Här skapar vi Bussar
                     vehicle = new Bus();
+                    color = "Blå";
                     wheels = 6;
+                    duration = 15;
                     parkedVehicles.Add(vehicle);
                     break;
 
                 case 4: // Här skapar vi MC
                     vehicle = new MC();
+                    color = "Svart";
                     wheels = 2;
+                    duration = 20;
                     parkedVehicles.Add(vehicle);
                     break;
 

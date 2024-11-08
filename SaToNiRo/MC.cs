@@ -13,19 +13,17 @@ namespace SaToNiRo
         Random rnd = new Random();
 
 
-        public MC(string brand)
+        public MC()
         {
             RegNumber = Vehicle.GenerateRandomRegNumber();
-            Brand = brand;
+            Brand = "Yamaha";
         }
 
-        public void McInfo()
+       /* public void McInfo()
         {
-            Console.WriteLine("MC Märke: ");
-            string brand = Console.ReadLine();
-
+           
             Console.WriteLine("Hur länge vill du parkera? ");
             int parkeringTime = int.Parse(Console.ReadLine());
-        }
+        }*/
     }
 }
