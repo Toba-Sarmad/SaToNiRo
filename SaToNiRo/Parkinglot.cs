@@ -26,7 +26,7 @@ namespace SaToNiRo
                     string vehicleInfo = vehicle is Car ? "Bil " :
                                         vehicle is Bus ? "Buss " :
                                         vehicle is MC ? "Mc " : "Fordon";
-                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber}]");
+                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} ParkeingsTid: {vehicle.ParkeingDuration} minuter.");
                 }
 
               /*  if (parkingSpots.ContainsKey(i))
@@ -40,7 +40,7 @@ namespace SaToNiRo
             }
         }
 
-        public void CreateRandomVehicles(int userInput)
+       /* public void CreateRandomVehicles(int userInput)
         {
             string color;
             int duration;
@@ -82,8 +82,8 @@ namespace SaToNiRo
 
                 default: // Vid eventuella fel
                     throw new Exception("Ogiltig fordons typ vid slumpmässigt genererat fordon "); 
-            }
+            }*/
         }
 
     }
-}
+

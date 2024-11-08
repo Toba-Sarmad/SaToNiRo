@@ -11,12 +11,14 @@ namespace SaToNiRo
         public string RegNumber { get; set; }
         public string Color { get; set; }
         public int Wheels { get; set; }
+
+        public int ParkeingDuration { get; set; }   
         
         public Vehicle()
         {
            RegNumber = GenerateRandomRegNumber();
-         //  Color = color;
-          // Wheels = wheels;
+           //Color = color;
+           //Wheels = wheels;
         }
 
         public static string GenerateRandomRegNumber()

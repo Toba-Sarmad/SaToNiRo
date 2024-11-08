@@ -20,28 +20,59 @@ namespace SaToNiRo
             int userInput = int.Parse(Console.ReadLine());
             Console.Clear();
 
+            string color;
+            int duration;
+            Vehicle vehicle;
+            bool isElectric;
+
 
             switch (userInput)
             {
 
                 case 1: // Bil
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
+                    //parkinglot.CreateRandomVehicles(userInput);
+                    vehicle = new Car();
+                    color = "Röd";
+                    duration = 10;
+                    vehicle.Color = color;
+                    vehicle.ParkeingDuration = duration;
+                    parkinglot.parkedVehicles.Add(vehicle);
+                    isElectric = false;
+                    Console.WriteLine("Tack så mycket! Du får att parkera din BIL för 10 minuter.");
                     break;
 
                 case 2: // ElBil
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
+                    // parkinglot.CreateRandomVehicles(userInput);
+                    vehicle = new Car();
+                    color = "Röd";
+                    duration = 10;
+                    vehicle.Color = color;
+                    vehicle.ParkeingDuration = duration;
+                    parkinglot.parkedVehicles.Add(vehicle);
+                    isElectric = true;
+                    Console.WriteLine("Tack så mycket! Du får att parkera din EL-BIL för 10 minuter.");
                     break;
 
                 case 3: // MC
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
+                        //parkinglot.CreateRandomVehicles(userInput);
+                    vehicle = new MC();
+                    color = "Svart";
+                    duration = 20;
+                    vehicle.Color = color;
+                    vehicle.ParkeingDuration = duration;
+                    parkinglot.parkedVehicles.Add(vehicle);
+                    Console.WriteLine("Tack så mycket! Du får att parkera din MC för 20 minuter.");
                     break;
 
                 case 4: // Buss
-                    parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Parkerat ");
+                        //parkinglot.CreateRandomVehicles(userInput);
+                    vehicle = new Bus();
+                    color = "Blå";
+                    duration = 15;
+                    vehicle.Color = color;
+                    vehicle.ParkeingDuration = duration;
+                    parkinglot.parkedVehicles.Add(vehicle);
+                    Console.WriteLine("Tack så mycket! Du får att parkera  din Buss för 15 minuter.");
                     break;
 
                 case 5:
