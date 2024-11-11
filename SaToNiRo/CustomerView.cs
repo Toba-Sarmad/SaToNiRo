@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,7 +37,7 @@ namespace SaToNiRo
                     color = "Röd";
                     duration = 10;
                     vehicle.Color = color;
-                    vehicle.ParkeingDuration = duration;
+                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     isElectric = false;
                     Console.WriteLine("Tack så mycket! Du får att parkera din BIL med följände detaljer: ");
@@ -52,14 +53,10 @@ namespace SaToNiRo
                     color = "Röd";
                     duration = 10;
                     vehicle.Color = color;
-                    vehicle.ParkeingDuration = duration;
+                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     isElectric = true;
                     Console.WriteLine("Tack så mycket! Du får att parkera din EL-BIL för 10 minuter.");
-                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
-                    Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
-
                     break;
 
                 case 3: // MC
@@ -68,13 +65,9 @@ namespace SaToNiRo
                     color = "Svart";
                     duration = 20;
                     vehicle.Color = color;
-                    vehicle.ParkeingDuration = duration;
+                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera din MC för 20 minuter.");
-                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
-                    Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
-
                     break;
 
                 case 4: // Buss
@@ -83,13 +76,9 @@ namespace SaToNiRo
                     color = "Blå";
                     duration = 15;
                     vehicle.Color = color;
-                    vehicle.ParkeingDuration = duration;
+                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera  din Buss för 15 minuter.");
-                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
-                    Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
-
                     break;
 
                 case 5:
