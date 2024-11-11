@@ -43,7 +43,7 @@ namespace SaToNiRo
                     Console.WriteLine("Tack så mycket! Du får att parkera din BIL med följände detaljer: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
 
                     break;
 
