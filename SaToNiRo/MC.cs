@@ -16,7 +16,14 @@ namespace SaToNiRo
         public MC()
         {
             RegNumber = Vehicle.GenerateRandomRegNumber();
-            Brand = "Yamaha ";
+            Brand = "Yamaha";
         }
+
+       /* public void McInfo()
+        {
+           
+            Console.WriteLine("Hur länge vill du parkera? ");
+            int parkeringTime = int.Parse(Console.ReadLine());
+        }*/
     }
 }
