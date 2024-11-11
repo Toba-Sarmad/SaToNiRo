@@ -24,6 +24,7 @@ namespace SaToNiRo
             int duration;
             Vehicle vehicle;
             bool isElectric;
+            string brand;
 
 
             switch (userInput)
@@ -38,7 +39,11 @@ namespace SaToNiRo
                     vehicle.ParkeingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     isElectric = false;
-                    Console.WriteLine("Tack så mycket! Du får att parkera din BIL för 10 minuter.");
+                    Console.WriteLine("Tack så mycket! Du får att parkera din BIL med följände detaljer: ");
+                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
+                    Console.WriteLine($"Färg: {vehicle.Color} ");
+                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
+
                     break;
 
                 case 2: // ElBil
@@ -51,6 +56,10 @@ namespace SaToNiRo
                     parkinglot.parkedVehicles.Add(vehicle);
                     isElectric = true;
                     Console.WriteLine("Tack så mycket! Du får att parkera din EL-BIL för 10 minuter.");
+                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
+                    Console.WriteLine($"Färg: {vehicle.Color} ");
+                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
+
                     break;
 
                 case 3: // MC
@@ -62,6 +71,10 @@ namespace SaToNiRo
                     vehicle.ParkeingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera din MC för 20 minuter.");
+                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
+                    Console.WriteLine($"Färg: {vehicle.Color} ");
+                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
+
                     break;
 
                 case 4: // Buss
@@ -73,6 +86,10 @@ namespace SaToNiRo
                     vehicle.ParkeingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera  din Buss för 15 minuter.");
+                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
+                    Console.WriteLine($"Färg: {vehicle.Color} ");
+                    Console.WriteLine($"Tid: {vehicle.ParkeingDuration} minuter \n");
+
                     break;
 
                 case 5:
