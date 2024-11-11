@@ -33,15 +33,16 @@ namespace SaToNiRo
 
             switch (userInput)
             {
-                case 1: 
-                   
+                case 1:
+                    UserMenu(parkinglot);
                     break;
 
                 case 2:
+                    OwnerMenu(parkinglot);
                     break;
 
                 case 3:
-                    
+                    ParkingAttendant(parkinglot);
                     break;
 
                 case 4:
@@ -55,15 +56,96 @@ namespace SaToNiRo
             }
         }
 
+
+        public static void OwnerMenu(Parkinglot parkinglot)
+        {
+            Console.WriteLine("Välkommen ägare!\n\n ");
+
+            Console.WriteLine("Gör följande val \n");
+            Console.WriteLine("1: Se lediga parkeringsplaster");
+            Console.WriteLine("2: Se alla parkerade fordon");
+            Console.WriteLine("3: Se totala intäkter");
+            Console.WriteLine("4: Se vilka fordon som har parkerat");
+            Console.WriteLine("5: Tillbaka");
+            
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            switch (userInput)
+            {
+                case 1:
+                    Console.WriteLine("Lediga p-platser");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Parkerade fordon");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Totala intäkter");
+                    break;
+
+                case 4:
+                    Console.WriteLine("Vilka fordon");
+
+                    break;
+                case 5:
+                    Meny(parkinglot);
+                    break;
+
+                default:
+                    Console.WriteLine("Ogiltigt val, försök igen ");
+                    break;
+            }
+        }
+
+
+        public static void ParkingAttendant(Parkinglot parkinglot)
+        {
+            Console.WriteLine("Välkommen parkeringsvakt!\n\n ");
+
+            Console.WriteLine("Gör följande val \n");
+            Console.WriteLine("1: Se parkerade fordon");
+            Console.WriteLine("2: Se parkeringstider överskridit");
+            Console.WriteLine("3: Se kvarvarande parkeringstid");
+            Console.WriteLine("4: Tillbaka");
+
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            switch (userInput)
+            {
+                case 1:
+                    Console.WriteLine("Se parkerade fordon");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Överskrida fordon");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Kvarvarande parkeringstid");
+                    break;
+
+                case 4:
+                    Meny(parkinglot);
+                    break;
+
+                default:
+                    Console.WriteLine("Ogiltigt val, försök igen ");
+                    break;
+            }
+        }
+
         public static void UserMenu(Parkinglot parkinglot)
         {
-            Console.WriteLine("Välkomen till SaToNiRos parkeringshus\n\n ");
+            Console.WriteLine("Välkomen kund!\n\n ");
 
             Console.WriteLine("Gör följande val \n");
             Console.WriteLine("1: Parkera fordon ");
             Console.WriteLine("2: Avsluta parkering ");
             Console.WriteLine("3: Se parkerade fordon ");
-            Console.WriteLine("4: Avsluta program ");
+            Console.WriteLine("4: Tillbaka ");
 
             int userInput = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
@@ -82,6 +164,7 @@ namespace SaToNiRo
                     break;
 
                 case 4:
+                    Meny(parkinglot);
                     break;
 
                 default:
