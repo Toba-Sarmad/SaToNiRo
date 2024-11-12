@@ -72,11 +72,11 @@ namespace SaToNiRo
             switch (userInput)
             {
                 case 1:
-                    parkinglot.DisplayParkingLot(); 
+                    parkinglot.DisplayParkingLot();
                     break;
 
                 case 2:
-                    parkinglot.GetTotalRevenue();
+                    Console.WriteLine($"Total intäkter {parkinglot.CalculateRevenue}");
                     break;
 
                 case 3:
