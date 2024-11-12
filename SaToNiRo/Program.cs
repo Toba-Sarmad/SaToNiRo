@@ -76,7 +76,7 @@ namespace SaToNiRo
                     break;
 
                 case 2:
-                    Console.WriteLine("Totala intäkter");
+                    parkinglot.GetTotalRevenue();
                     break;
 
                 case 3:

@@ -23,6 +23,11 @@ namespace SaToNiRo
             TotalRevenue += totalFee;
         }
 
+        public double GetTotalRevenue()
+        {
+            return TotalRevenue;
+        }
+
         public void DisplayParkingLot()
         {
             Console.WriteLine("Parkerade fordon \n");

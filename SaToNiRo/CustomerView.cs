@@ -39,6 +39,7 @@ namespace SaToNiRo
                     vehicle.Color = color;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     isElectric = false;
                     Console.WriteLine("Tack så mycket! Du får att parkera din BIL med följände detaljer: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
@@ -55,6 +56,7 @@ namespace SaToNiRo
                     vehicle.Color = color;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     isElectric = true;
                     Console.WriteLine("Tack så mycket! Du får att parkera din EL-BIL för 10 minuter.");
                     break;
@@ -67,6 +69,7 @@ namespace SaToNiRo
                     vehicle.Color = color;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera din MC för 20 minuter.");
                     break;
 
@@ -78,6 +81,7 @@ namespace SaToNiRo
                     vehicle.Color = color;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera  din Buss för 15 minuter.");
                     break;
 
