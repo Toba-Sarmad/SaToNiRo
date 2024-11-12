@@ -14,6 +14,15 @@ namespace SaToNiRo
         public Dictionary<int,Vehicle>parkingSpots = new Dictionary<int,Vehicle>();
         public Random rnd = new Random();
 
+        public double TotalRevenue { get; set; } = 0;
+
+        public void CalculateRevenue(Vehicle vehicle)
+        {
+            double ratePerMinute = 10;
+            double totalFee = (double)vehicle.ParkingDuration * ratePerMinute;
+            TotalRevenue += totalFee;
+        }
+
         public void DisplayParkingLot()
         {
             Console.WriteLine("Parkerade fordon \n");
