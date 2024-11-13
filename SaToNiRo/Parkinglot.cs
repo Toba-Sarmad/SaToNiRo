@@ -54,6 +54,15 @@ namespace SaToNiRo
             }
         }
 
+        public void GetParkedVehicleCategory()
+        {
+            var orderedList = parkedVehicles.GroupBy(p => p.Wheels).Select(group => new {Category = group.Key, Amount = group.Count()});
+            foreach (var vehicle in orderedList)
+            {
+                Console.WriteLine($"{vehicle.Category} : {vehicle.Amount}");
+            }
+        }
+
        /* public void CreateRandomVehicles(int userInput)
         {
             string color;

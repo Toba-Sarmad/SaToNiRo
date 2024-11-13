@@ -64,7 +64,8 @@ namespace SaToNiRo
             Console.WriteLine("Gör följande val \n");
             Console.WriteLine("1: Se lediga /Upptagna plaster /alla parkerade fordon");
             Console.WriteLine("2: Se totala intäkter");
-            Console.WriteLine("3: Tillbaka");
+            Console.WriteLine("3: Se hur många fordon per kategori som parkerat");
+            Console.WriteLine("4: Tillbaka");
             
             int userInput = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
@@ -80,6 +81,10 @@ namespace SaToNiRo
                     break;
 
                 case 3:
+                    parkinglot.GetParkedVehicleCategory();
+                    break;
+
+                case 4:
                     Console.WriteLine("Tillbaka");
                     Meny(parkinglot);
                     break;

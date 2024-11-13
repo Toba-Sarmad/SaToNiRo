@@ -37,6 +37,7 @@ namespace SaToNiRo
                     color = "Röd";
                     duration = 10;
                     vehicle.Color = color;
+                    vehicle.Wheels = 4;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
@@ -54,6 +55,7 @@ namespace SaToNiRo
                     color = "Röd";
                     duration = 10;
                     vehicle.Color = color;
+                    vehicle.Wheels = 4;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
@@ -67,6 +69,7 @@ namespace SaToNiRo
                     color = "Svart";
                     duration = 20;
                     vehicle.Color = color;
+                    vehicle.Wheels = 2;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
@@ -79,6 +82,7 @@ namespace SaToNiRo
                     color = "Blå";
                     duration = 15;
                     vehicle.Color = color;
+                    vehicle.Wheels = 6;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);

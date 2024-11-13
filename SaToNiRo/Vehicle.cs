@@ -17,7 +17,7 @@ namespace SaToNiRo
         {
            RegNumber = GenerateRandomRegNumber();
            // Color = color;
-           //Wheels = wheels;
+           Wheels = Wheels;
         }
 
         public static string GenerateRandomRegNumber()
