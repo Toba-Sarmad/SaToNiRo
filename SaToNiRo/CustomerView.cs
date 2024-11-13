@@ -37,8 +37,10 @@ namespace SaToNiRo
                     color = "Röd";
                     duration = 10;
                     vehicle.Color = color;
+                    vehicle.Wheels = 4;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     isElectric = false;
                     Console.WriteLine("Tack så mycket! Du får att parkera din BIL med följände detaljer: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
@@ -53,8 +55,10 @@ namespace SaToNiRo
                     color = "Röd";
                     duration = 10;
                     vehicle.Color = color;
+                    vehicle.Wheels = 4;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     isElectric = true;
                     Console.WriteLine("Tack så mycket! Du får att parkera din EL-BIL för 10 minuter.");
                     break;
@@ -65,8 +69,10 @@ namespace SaToNiRo
                     color = "Svart";
                     duration = 20;
                     vehicle.Color = color;
+                    vehicle.Wheels = 2;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera din MC för 20 minuter.");
                     break;
 
@@ -76,8 +82,10 @@ namespace SaToNiRo
                     color = "Blå";
                     duration = 15;
                     vehicle.Color = color;
+                    vehicle.Wheels = 6;
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
+                    parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket! Du får att parkera  din Buss för 15 minuter.");
                     break;
 

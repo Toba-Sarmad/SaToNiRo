@@ -14,6 +14,20 @@ namespace SaToNiRo
         public Dictionary<int,Vehicle>parkingSpots = new Dictionary<int,Vehicle>();
         public Random rnd = new Random();
 
+        public double TotalRevenue { get; set; } = 0;
+
+        public void CalculateRevenue(Vehicle vehicle)
+        {
+            double ratePerMinute = 10;
+            double totalFee = (double)vehicle.ParkingDuration * ratePerMinute;
+            TotalRevenue += totalFee;
+        }
+
+        public double GetTotalRevenue()
+        {
+            return TotalRevenue;
+        }
+
         public void DisplayParkingLot()
         {
             Console.WriteLine("Parkerade fordon \n");
@@ -37,6 +51,15 @@ namespace SaToNiRo
                                          vehicle is MC ? "Mc " : "Fordon";
                     Console.Write($"[{vehicleInfo}-{vehicle.RegNumber}]");
                 } */
+            }
+        }
+
+        public void GetParkedVehicleCategory()
+        {
+            var orderedList = parkedVehicles.GroupBy(p => p.Wheels).Select(group => new {Category = group.Key, Amount = group.Count()});
+            foreach (var vehicle in orderedList)
+            {
+                Console.WriteLine($"{vehicle.Category} : {vehicle.Amount}");
             }
         }
 
