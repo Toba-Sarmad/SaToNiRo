@@ -76,7 +76,7 @@ namespace SaToNiRo
                     break;
 
                 case 2:
-                    Console.WriteLine($"Total intäkter {parkinglot.CalculateRevenue}");
+                    Console.WriteLine($"Total intäkter {parkinglot.TotalRevenue}");
                     break;
 
                 case 3:
