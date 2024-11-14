@@ -42,7 +42,8 @@ namespace SaToNiRo
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     isElectric = false;
-                    Console.WriteLine("Tack så mycket! Du får att parkera din BIL med följände detaljer: ");
+                    Console.WriteLine("Tack så mycket!");
+                    Console.WriteLine("Detaljer om fordon Bil: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
                     Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
@@ -60,7 +61,12 @@ namespace SaToNiRo
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     isElectric = true;
-                    Console.WriteLine("Tack så mycket! Du får att parkera din EL-BIL för 10 minuter.");
+                    Console.WriteLine("Tack så mycket!");
+                    Console.WriteLine("Detaljer om fordon ELBil: ");
+                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
+                    Console.WriteLine($"Färg: {vehicle.Color} ");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+
                     break;
 
                 case 3: // MC
@@ -73,7 +79,12 @@ namespace SaToNiRo
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
-                    Console.WriteLine("Tack så mycket! Du får att parkera din MC för 20 minuter.");
+                    Console.WriteLine("Tack så mycket!");
+                    Console.WriteLine("Detaljer om fordon MC: ");
+                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
+                    Console.WriteLine($"Färg: {vehicle.Color} ");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+
                     break;
 
                 case 4: // Buss
@@ -86,7 +97,12 @@ namespace SaToNiRo
                     vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
-                    Console.WriteLine("Tack så mycket! Du får att parkera  din Buss för 15 minuter.");
+                    Console.WriteLine("Tack så mycket!");
+                    Console.WriteLine("Detaljer om fordon Buss: ");
+                    Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
+                    Console.WriteLine($"Färg: {vehicle.Color} ");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+
                     break;
 
                 case 5:
@@ -99,6 +115,6 @@ namespace SaToNiRo
             }
         }
 
-      
+
     }
 }
