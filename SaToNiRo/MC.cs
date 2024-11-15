@@ -19,11 +19,13 @@ namespace SaToNiRo
             Brand = "Yamaha";
         }
 
-       /* public void McInfo()
-        {
-           
-            Console.WriteLine("Hur länge vill du parkera? ");
-            int parkeringTime = int.Parse(Console.ReadLine());
-        }*/
+        
+
+        /* public void McInfo()
+         {
+
+             Console.WriteLine("Hur länge vill du parkera? ");
+             int parkeringTime = int.Parse(Console.ReadLine());
+         }*/
     }
 }

@@ -35,7 +35,8 @@ namespace SaToNiRo
                     //parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new Car();
                     color = "Röd";
-                    duration = 10;
+                    Console.WriteLine("Hur långt tid vill du parkera din fordon?(i sekunder)");
+                    duration = Int32.Parse(Console.ReadLine());
                     vehicle.Color = color;
                     vehicle.Wheels = 4;
                     vehicle.ParkingDuration = duration;
@@ -46,7 +47,7 @@ namespace SaToNiRo
                     Console.WriteLine("Detaljer om fordon Bil: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 
@@ -54,7 +55,8 @@ namespace SaToNiRo
                     // parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new Car();
                     color = "Röd";
-                    duration = 10;
+                    Console.WriteLine("Hur långt tid vill du parkera din fordon?(i sekunder)");
+                    duration = Int32.Parse(Console.ReadLine());
                     vehicle.Color = color;
                     vehicle.Wheels = 4;
                     vehicle.ParkingDuration = duration;
@@ -65,7 +67,7 @@ namespace SaToNiRo
                     Console.WriteLine("Detaljer om fordon ELBil: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 
@@ -73,7 +75,8 @@ namespace SaToNiRo
                         //parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new MC();
                     color = "Svart";
-                    duration = 20;
+                    Console.WriteLine("Hur långt tid vill du parkera din fordon?(i sekunder)");
+                    duration = Int32.Parse(Console.ReadLine());
                     vehicle.Color = color;
                     vehicle.Wheels = 2;
                     vehicle.ParkingDuration = duration;
@@ -83,7 +86,7 @@ namespace SaToNiRo
                     Console.WriteLine("Detaljer om fordon MC: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 
@@ -91,7 +94,8 @@ namespace SaToNiRo
                         //parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new Bus();
                     color = "Blå";
-                    duration = 15;
+                    Console.WriteLine("Hur långt tid vill du parkera din fordon?(i sekunder)");
+                    duration = Int32.Parse(Console.ReadLine());
                     vehicle.Color = color;
                     vehicle.Wheels = 6;
                     vehicle.ParkingDuration = duration;
@@ -101,7 +105,7 @@ namespace SaToNiRo
                     Console.WriteLine("Detaljer om fordon Buss: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 

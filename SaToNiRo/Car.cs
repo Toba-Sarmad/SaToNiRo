@@ -21,11 +21,13 @@ namespace SaToNiRo
             
         }
 
-       /* public void CarInfo()
-        {
-           
-            Console.WriteLine("Hur länge vill du parkera? ");
-            int parkeringTime = int.Parse(Console.ReadLine());
-        }*/
+        
+
+        /* public void CarInfo()
+         {
+
+             Console.WriteLine("Hur länge vill du parkera? ");
+             int parkeringTime = int.Parse(Console.ReadLine());
+         }*/
     }
 }

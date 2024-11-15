@@ -40,7 +40,7 @@ namespace SaToNiRo
                     string vehicleInfo = vehicle is Car ? "Bil " :
                                         vehicle is Bus ? "Buss " :
                                         vehicle is MC ? "Mc " : "Fordon";
-                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} Parkerings Tid: {vehicle.ParkingDuration} minuter.");
+                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} Parkerings Tid: {vehicle.ParkingDuration} sekunder.");
                 }
 
               /*  if (parkingSpots.ContainsKey(i))
@@ -63,9 +63,15 @@ namespace SaToNiRo
             }
         }
 
-        public void ParkingDurationCountDown(int input)
+        public int ParkingDurationCountDown(int duration)
         {
-
+            for (int i = duration; i >= 0; i--)
+            {
+                Console.WriteLine(i);
+                Thread.Sleep(1000);
+                
+            }
+            return 10;
         }
 
        /* public void CreateRandomVehicles(int userInput)
