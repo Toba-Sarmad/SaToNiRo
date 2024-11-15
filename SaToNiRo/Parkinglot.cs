@@ -63,6 +63,11 @@ namespace SaToNiRo
             }
         }
 
+        public void ParkingDurationCountDown(int input)
+        {
+
+        }
+
        /* public void CreateRandomVehicles(int userInput)
         {
             string color;
