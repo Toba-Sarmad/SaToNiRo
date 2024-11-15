@@ -112,7 +112,7 @@ namespace SaToNiRo
             switch (userInput)
             {
                 case 1:
-                    Console.WriteLine("Se parkerade fordon");
+                    parkinglot.DisplayParkingLot();
                     break;
 
                 case 2:
