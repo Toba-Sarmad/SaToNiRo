@@ -120,7 +120,7 @@ namespace SaToNiRo
                     break;
 
                 case 3:
-                    Console.WriteLine("Kvarvarande parkeringstid" + Vehicle());
+                    Console.WriteLine("Kvarvarande parkeringstid");
                     break;
 
                 case 4:

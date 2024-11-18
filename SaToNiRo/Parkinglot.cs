@@ -34,23 +34,21 @@ namespace SaToNiRo
 
             for (int i = 1; i <= totalNumOfParkingSpots; i++)
             {
-                foreach (Vehicle parkedVehicle in parkedVehicles)
+                foreach (var vehicle in parkedVehicles)
                 {
-                    var vehicle = parkedVehicle;
-                    string vehicleInfo = vehicle is Car ? "Bil " :
-                                        vehicle is Bus ? "Buss " :
-                                        vehicle is MC ? "Mc " : "Fordon";
-                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} Parkerings Tid: {vehicle.ParkingDuration} sekunder.");
+                    if (vehicle != null)
+                    {
+                        
+                        string vehicleInfo = vehicle is Car ? "Bil " :
+                                             vehicle is Bus ? "Buss " :
+                                             vehicle is MC ? "Mc " : "Fordon";
+                        Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} Parkerings Tid: {vehicle.ParkingDuration} sekunder.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Plats {i}: Tom ");
+                    }
                 }
-
-              /*  if (parkingSpots.ContainsKey(i))
-                {
-                    var vehicle = parkingSpots[i];
-                    string vehicleInfo = vehicle is Car ? "Bil " :
-                                         vehicle is Bus ? "Buss " :
-                                         vehicle is MC ? "Mc " : "Fordon";
-                    Console.Write($"[{vehicleInfo}-{vehicle.RegNumber}]");
-                } */
             }
         }
 

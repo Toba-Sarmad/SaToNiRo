@@ -26,21 +26,20 @@ namespace SaToNiRo
             Vehicle vehicle;
             bool isElectric;
             string brand;
-
+            int parkingSpot = 1;
 
             switch (userInput)
             {
 
                 case 1: // Bil
                     //parkinglot.CreateRandomVehicles(userInput);
-                    vehicle = new Car();
-                    color = "Röd";
+                    // duration = Int32.Parse(Console.ReadLine())
+                    vehicle = new Car { Color = "Röd", ParkingDuration = 10, Wheels = 4, RegNumber = Vehicle.GenerateRandomRegNumber()};
+                    if (parkingSpot != -1)
+                    {
+                        parkinglot.parkingSpots[parkingSpot] = vehicle;
+                    }
                     Console.WriteLine("Hur långt tid vill du parkera din fordon?(i sekunder)");
-                    duration = Int32.Parse(Console.ReadLine());
-                    vehicle.Color = color;
-                    vehicle.Wheels = 4;
-                    vehicle.ParkingDuration = duration;
-                    parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     isElectric = false;
                     Console.WriteLine("Tack så mycket!");
@@ -48,6 +47,7 @@ namespace SaToNiRo
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
                     Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
+                    parkinglot.parkedVehicles.Add(vehicle);
 
                     break;
 
@@ -117,6 +117,9 @@ namespace SaToNiRo
                     Console.WriteLine("Ogiltigt val, försök igen");
                     break;
             }
+
+            
+
         }
 
 
