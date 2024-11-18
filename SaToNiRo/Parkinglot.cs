@@ -40,7 +40,7 @@ namespace SaToNiRo
                     string vehicleInfo = vehicle is Car ? "Bil " :
                                         vehicle is Bus ? "Buss " :
                                         vehicle is MC ? "Mc " : "Fordon";
-                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} Parkerings Tid: {vehicle.ParkingDuration} minuter.");
+                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} Parkerings Tid: {vehicle.ParkingDuration} sekunder.");
                 }
 
               /*  if (parkingSpots.ContainsKey(i))
