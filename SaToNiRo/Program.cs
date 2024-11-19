@@ -12,7 +12,6 @@ namespace SaToNiRo
             while (true)
             {
                 Meny(parkinglot);
-
             }
 
         }

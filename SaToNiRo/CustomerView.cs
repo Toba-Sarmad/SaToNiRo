@@ -34,11 +34,7 @@ namespace SaToNiRo
                 case 1: // Bil
                     //parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new Car();
-                    color = "Röd";
-                    duration = 10;
-                    vehicle.Color = color;
                     vehicle.Wheels = 4;
-                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     isElectric = false;
@@ -46,62 +42,50 @@ namespace SaToNiRo
                     Console.WriteLine("Detaljer om fordon Bil: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 
                 case 2: // ElBil
                     // parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new Car();
-                    color = "Röd";
-                    duration = 10;
-                    vehicle.Color = color;
                     vehicle.Wheels = 4;
-                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     isElectric = true;
                     Console.WriteLine("Tack så mycket!");
-                    Console.WriteLine("Detaljer om fordon ELBil: ");
+                    Console.WriteLine("Detaljer om fordon ElBil: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 
                 case 3: // MC
                         //parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new MC();
-                    color = "Svart";
-                    duration = 20;
-                    vehicle.Color = color;
                     vehicle.Wheels = 2;
-                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket!");
                     Console.WriteLine("Detaljer om fordon MC: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 
                 case 4: // Buss
                         //parkinglot.CreateRandomVehicles(userInput);
                     vehicle = new Bus();
-                    color = "Blå";
-                    duration = 15;
-                    vehicle.Color = color;
                     vehicle.Wheels = 6;
-                    vehicle.ParkingDuration = duration;
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket!");
                     Console.WriteLine("Detaljer om fordon Buss: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
                     Console.WriteLine($"Färg: {vehicle.Color} ");
-                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} minuter \n");
+                    Console.WriteLine($"Tid: {vehicle.ParkingDuration} sekunder \n");
 
                     break;
 
