@@ -16,7 +16,6 @@ namespace SaToNiRo
 
         public Car()
         {
-            RegNumber = Vehicle.GetUserRegNumber();
             ElectricCar = rnd.Next(0, 2) == 1;
             
         }

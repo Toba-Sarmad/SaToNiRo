@@ -9,7 +9,7 @@ namespace TestsSaToNiRo
         public void TestingForValidRegNumberInput()
         {
             string expected = "ABC123";
-            var result = Vehicle.GetUserRegNumber();   
+            var result = Vehicle.GetUserRegNumber("ABC123");   
             Assert.AreEqual(expected, result);
         }
     }

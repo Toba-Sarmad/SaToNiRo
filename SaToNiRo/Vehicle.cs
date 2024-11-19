@@ -16,16 +16,14 @@ namespace SaToNiRo
         
         public Vehicle()
         {
-           RegNumber = GetUserRegNumber();
            Color = ChooseVehicleColor();
-           Wheels = Wheels;
+           Wheels = 4;
            ParkingDuration = UserParkingDuration();
         }
 
-        public static string GetUserRegNumber()
+        public static string GetUserRegNumber(string input)
         {
-            var regNumber = Console.ReadLine().ToUpper();
-            return regNumber;
+            return input;
         }
 
         public static string ChooseVehicleColor()

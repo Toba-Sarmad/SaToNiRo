@@ -15,7 +15,6 @@ namespace SaToNiRo
 
         public MC()
         {
-            RegNumber = Vehicle.GetUserRegNumber();
             Brand = "Yamaha";
         }
 
