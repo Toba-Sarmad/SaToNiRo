@@ -15,7 +15,7 @@ namespace SaToNiRo
 
         public Bus()
         {
-            RegNumber = Vehicle.GenerateRandomRegNumber();
+            RegNumber = Vehicle.GetUserRegNumber();
             numOfPassangers = rnd.Next(1, 36);
         }
 

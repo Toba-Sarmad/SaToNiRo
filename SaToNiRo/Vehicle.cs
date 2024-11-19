@@ -16,16 +16,16 @@ namespace SaToNiRo
         
         public Vehicle()
         {
-           RegNumber = GenerateRandomRegNumber();
+           RegNumber = GetUserRegNumber();
            Color = ChooseVehicleColor();
            Wheels = Wheels;
            ParkingDuration = UserParkingDuration();
         }
 
-        public static string GenerateRandomRegNumber()
+        public static string GetUserRegNumber()
         {
-            Random rnd = new Random();
-            return $"{(char)rnd.Next('A', 'Z')}{(char)rnd.Next('A', 'Z')}{(char)rnd.Next('A', 'Z')}{rnd.Next(100, 999)}";
+            var regNumber = Console.ReadLine().ToUpper();
+            return regNumber;
         }
 
         public static string ChooseVehicleColor()

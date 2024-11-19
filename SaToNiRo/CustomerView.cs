@@ -33,8 +33,9 @@ namespace SaToNiRo
 
                 case 1: // Bil
                     //parkinglot.CreateRandomVehicles(userInput);
-                    vehicle = new Car();
-                    vehicle.Wheels = 4;
+                    Console.WriteLine("Ange registreringsnummer: \n");
+                    string regNumber = Vehicle.GetUserRegNumber();
+                    vehicle = new Car { RegNumber = regNumber, Color = Vehicle.ChooseVehicleColor(), ParkingDuration = Vehicle.UserParkingDuration(), Wheels = 4 };
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     isElectric = false;
