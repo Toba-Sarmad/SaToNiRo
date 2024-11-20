@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -18,7 +20,7 @@ namespace SaToNiRo
         
         public Vehicle()
         {
-           Color = ChooseVehicleColor();
+           //Color = ChooseVehicleColor("");
            Wheels = 4;
            ParkingDuration = UserParkingDuration();
         }
@@ -42,11 +44,25 @@ namespace SaToNiRo
         }
             
 
-        public static string ChooseVehicleColor()
+        public static string ChooseVehicleColor(int input)
         {
-            Console.WriteLine("Vad har ditt fordon för färg? ");
-            string color = Console.ReadLine();
-            return color;
+            switch (input)
+            {
+                case 1:
+                    return "Röd";
+                case 2:
+                    return "Blå";
+                case 3:
+                    return "Gul";
+                case 4:
+                    return "Svart";
+                case 5:
+                    return "Silver";
+                case 6:
+                    return "Grå";
+                default:
+                    return "Ogiltlig färg! Försök igen";
+            }
         }
 
         public static int UserParkingDuration()

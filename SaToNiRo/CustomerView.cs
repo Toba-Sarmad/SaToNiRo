@@ -21,10 +21,11 @@ namespace SaToNiRo
             int userInput = int.Parse(Console.ReadLine());
             Console.Clear();
 
-            string color;
+            int color;
             int duration;
             Vehicle vehicle;
             bool isElectric;
+            string regnumber = "";
             string brand;
 
 
@@ -34,8 +35,10 @@ namespace SaToNiRo
                 case 1: // Bil
                     //parkinglot.CreateRandomVehicles(userInput);
                     Console.WriteLine("Ange regnummer: \n");
-                    string regnumber = Console.ReadLine().ToUpper();
-                    vehicle = new Car { RegNumber = Vehicle.GetUserRegNumber(regnumber), Color = Vehicle.ChooseVehicleColor(), ParkingDuration = Vehicle.UserParkingDuration(), Wheels = 4 };
+                    regnumber = Console.ReadLine();
+                    Console.WriteLine("Ange färg: \n 1. Röd \n 2. Blå \n 3. Gul \n 4. Svart \n 5. Silver \n 6. Grå");
+                    color = Convert.ToInt32(Console.ReadLine());
+                    vehicle = new Car { RegNumber = Vehicle.GetUserRegNumber(regnumber), Color = Vehicle.ChooseVehicleColor(color), ParkingDuration = Vehicle.UserParkingDuration(), Wheels = 4 };
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     isElectric = false;

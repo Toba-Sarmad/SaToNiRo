@@ -28,5 +28,21 @@ namespace TestsSaToNiRo
             var result = Vehicle.GetUserRegNumber("123abc");
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void TestingForVehicleColor()
+        {
+            string expected = "Röd";
+            var result = Vehicle.ChooseVehicleColor(1);
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void TestingForValidVehicleColor()
+        {
+            string expected = "Ogiltlig färg! Försök igen";
+            var result = Vehicle.ChooseVehicleColor(99);
+            Assert.AreEqual(expected, result);
+        }
     }
 }
