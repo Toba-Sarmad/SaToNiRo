@@ -17,13 +17,7 @@ namespace SaToNiRo
         public string Color { get; set; }
         public int Wheels { get; set; }
         public int ParkingDuration { get; set; }  
-        
-        public Vehicle()
-        {
-           //Color = ChooseVehicleColor("");
-           Wheels = 4;
-           ParkingDuration = UserParkingDuration();
-        }
+
 
         public static string GetUserRegNumber(string input)
         {

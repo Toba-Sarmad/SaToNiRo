@@ -10,19 +10,5 @@ namespace SaToNiRo
     {
         public int numOfPassangers;
 
-        Random rnd = new Random();
-
-
-        public Bus()
-        {
-            numOfPassangers = rnd.Next(1, 36);
-        }
-
-       /* public void BusInfo()
-        {
-          
-            Console.WriteLine("Hur länge vill du parkera? ");
-            int parkeringTime = int.Parse(Console.ReadLine());
-        }*/
     }
 }

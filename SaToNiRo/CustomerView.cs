@@ -19,29 +19,25 @@ namespace SaToNiRo
             Console.WriteLine("5: Tillbaka till menyn ");
 
             int userInput = int.Parse(Console.ReadLine());
+
             Console.Clear();
 
-            int color;
-            int duration;
             Vehicle vehicle;
-            bool isElectric;
-            string regnumber = "";
-            string brand;
-
 
             switch (userInput)
             {
 
                 case 1: // Bil
-                    //parkinglot.CreateRandomVehicles(userInput);
-                    Console.WriteLine("Ange regnummer: \n");
-                    regnumber = Console.ReadLine();
-                    Console.WriteLine("Ange färg: \n 1. Röd \n 2. Blå \n 3. Gul \n 4. Svart \n 5. Silver \n 6. Grå");
-                    color = Convert.ToInt32(Console.ReadLine());
-                    vehicle = new Car { RegNumber = Vehicle.GetUserRegNumber(regnumber), Color = Vehicle.ChooseVehicleColor(color), ParkingDuration = Vehicle.UserParkingDuration(), Wheels = 4 };
+                    vehicle = new Car 
+                    {
+                        RegNumber = Vehicle.GetUserRegNumber(Helpers.SetRegNumber()),
+                        Color = Vehicle.ChooseVehicleColor(Helpers.GetColor()),
+                        ParkingDuration = Vehicle.UserParkingDuration(),
+                        Wheels = 4,
+                        ElectricCar = false
+                    };
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
-                    isElectric = false;
                     Console.WriteLine("Tack så mycket!");
                     Console.WriteLine("Detaljer om fordon Bil: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
@@ -51,12 +47,16 @@ namespace SaToNiRo
                     break;
 
                 case 2: // ElBil
-                    // parkinglot.CreateRandomVehicles(userInput);
-                    vehicle = new Car();
-                    vehicle.Wheels = 4;
+                    vehicle = new Car
+                    {
+                        RegNumber = Vehicle.GetUserRegNumber(Helpers.SetRegNumber()),
+                        Color = Vehicle.ChooseVehicleColor(Helpers.GetColor()),
+                        ParkingDuration = Vehicle.UserParkingDuration(),
+                        Wheels = 4,
+                        ElectricCar = true
+                    };
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
-                    isElectric = true;
                     Console.WriteLine("Tack så mycket!");
                     Console.WriteLine("Detaljer om fordon ElBil: ");
                     Console.WriteLine($"Registeringsnummer : {vehicle.RegNumber} ");
@@ -66,9 +66,16 @@ namespace SaToNiRo
                     break;
 
                 case 3: // MC
-                        //parkinglot.CreateRandomVehicles(userInput);
-                    vehicle = new MC();
-                    vehicle.Wheels = 2;
+                    Console.WriteLine("Vilket märke har motorcykeln?\n");
+                    string brand = Console.ReadLine();
+                    vehicle = new MC
+                    {
+                        RegNumber = Vehicle.GetUserRegNumber(Helpers.SetRegNumber()),
+                        Color = Vehicle.ChooseVehicleColor(Helpers.GetColor()),
+                        ParkingDuration = Vehicle.UserParkingDuration(),
+                        Wheels = 2,
+                        Brand = brand
+                    };
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket!");
@@ -80,9 +87,16 @@ namespace SaToNiRo
                     break;
 
                 case 4: // Buss
-                        //parkinglot.CreateRandomVehicles(userInput);
-                    vehicle = new Bus();
-                    vehicle.Wheels = 6;
+                    Console.WriteLine("Hur många passagerare har bussen?\n");
+                    int passangers = int.Parse(Console.ReadLine());
+                    vehicle = new Bus
+                    {
+                        RegNumber = Vehicle.GetUserRegNumber(Helpers.SetRegNumber()),
+                        Color = Vehicle.ChooseVehicleColor(Helpers.GetColor()),
+                        ParkingDuration = Vehicle.UserParkingDuration(),
+                        Wheels = 6,
+                        numOfPassangers = passangers
+                    };
                     parkinglot.parkedVehicles.Add(vehicle);
                     parkinglot.CalculateRevenue(vehicle);
                     Console.WriteLine("Tack så mycket!");

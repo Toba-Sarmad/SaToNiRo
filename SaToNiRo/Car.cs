@@ -9,22 +9,7 @@ namespace SaToNiRo
     public class Car : Vehicle
     {
 
-        bool ElectricCar {  get; set; }
+        public bool ElectricCar;   
 
-        Random rnd = new Random();
-        
-
-        public Car()
-        {
-            ElectricCar = rnd.Next(0, 2) == 1;
-            
-        }
-
-       /* public void CarInfo()
-        {
-           
-            Console.WriteLine("Hur länge vill du parkera? ");
-            int parkeringTime = int.Parse(Console.ReadLine());
-        }*/
     }
 }
