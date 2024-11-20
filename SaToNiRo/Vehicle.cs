@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace SaToNiRo
@@ -23,8 +25,22 @@ namespace SaToNiRo
 
         public static string GetUserRegNumber(string input)
         {
-            return input;
+            string regnumber = input.ToUpper();
+            string pattern = @"^[A-Z]{3}[0-9]{3}$";
+
+           
+                if (Regex.IsMatch(regnumber, pattern))
+                {
+
+                    return regnumber;
+                }
+                else
+                {
+                    return "Ogiltigt registreringsnummer! Försök igen.";
+                }
+           
         }
+            
 
         public static string ChooseVehicleColor()
         {
