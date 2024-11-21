@@ -13,9 +13,27 @@ namespace SaToNiRo
         public static string SetRegNumber()
         {
             string regNumber;
-            Console.WriteLine("Ange regnummer: \n");
-            return regNumber = Console.ReadLine();
+            bool isValid = false;
+
+            while (!isValid)
+            {
+                Console.WriteLine("Ange regnummer : \n");
+                regNumber = Console.ReadLine().ToUpper();
+
+                if (System.Text.RegularExpressions.Regex.IsMatch(regNumber, @"^[A-Z]{3}[0-9]{2}[A-Z0-9]$"))
+                {
+                    isValid = true;
+                    return regNumber;
+                }
+                else
+                {
+                    Console.WriteLine("Ogiltigt registreringsnummer! Försök igen.");
+                }
+            }
+
+            return null;
         }
+
 
         public static int GetColor()
         {

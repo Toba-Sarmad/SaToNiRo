@@ -8,7 +8,7 @@ namespace SaToNiRo
 {
     public class Parkinglot
     {
-        public double totalNumOfParkingSpots = 10;
+        public double totalNumOfParkingSpots = 1;
         public List<Vehicle> parkedVehicles = new List<Vehicle>();
         public int totalNumOfChargingStations = 2;
         public Dictionary<int,Vehicle>parkingSpots = new Dictionary<int,Vehicle>();
@@ -18,7 +18,7 @@ namespace SaToNiRo
 
         public void CalculateRevenue(Vehicle vehicle)
         {
-            double ratePerMinute = 10;
+            double ratePerMinute = 1.5;
             double totalFee = (double)vehicle.ParkingDuration * ratePerMinute;
             TotalRevenue += totalFee;
         }
@@ -40,17 +40,8 @@ namespace SaToNiRo
                     string vehicleInfo = vehicle is Car ? "Bil " :
                                         vehicle is Bus ? "Buss " :
                                         vehicle is MC ? "Mc " : "Fordon";
-                    Console.WriteLine($"Plats {i}:[{vehicleInfo}-{vehicle.RegNumber} Färg: {vehicle.Color} Parkerings Tid: {vehicle.ParkingDuration} sekunder.");
+                    Console.WriteLine($"Plats {i}:  [{vehicleInfo}-{vehicle.RegNumber}  Färg: {vehicle.Color}   Parkerings Tid: {vehicle.ParkingDuration} sekunder.");
                 }
-
-              /*  if (parkingSpots.ContainsKey(i))
-                {
-                    var vehicle = parkingSpots[i];
-                    string vehicleInfo = vehicle is Car ? "Bil " :
-                                         vehicle is Bus ? "Buss " :
-                                         vehicle is MC ? "Mc " : "Fordon";
-                    Console.Write($"[{vehicleInfo}-{vehicle.RegNumber}]");
-                } */
             }
         }
 
@@ -63,55 +54,14 @@ namespace SaToNiRo
             }
         }
 
-        public void ParkingDurationCountDown(int input)
+        public int ParkingDurationCountDown(int input)
         {
+            Thread.Sleep(1000);
 
-        }
-
-       /* public void CreateRandomVehicles(int userInput)
-        {
-            string color;
-            int duration;
-            int wheels;
-            Vehicle vehicle;
-
-
-            int vehicleType = userInput;
-
-            switch(vehicleType)
-            {
-                case 1: // Här skapar vi bilar
-                    vehicle = new Car();
-                    color = "Röd";
-                    wheels = 4;
-                    duration = 10;
-                    parkedVehicles.Add(vehicle);
-                    break;
-
-                    // Case 2 kommer bli elbil
-
-                case 3: // Här skapar vi Bussar
-                    vehicle = new Bus();
-                    color = "Blå";
-                    wheels = 6;
-                    duration = 15;
-                    parkedVehicles.Add(vehicle);
-                    break;
-
-                case 4: // Här skapar vi MC
-                    vehicle = new MC();
-                    color = "Svart";
-                    wheels = 2;
-                    duration = 20;
-                    parkedVehicles.Add(vehicle);
-                    break;
-
-
-
-                default: // Vid eventuella fel
-                    throw new Exception("Ogiltig fordons typ vid slumpmässigt genererat fordon "); 
-            }*/
+            return input--;
         }
 
     }
+
+}
 
